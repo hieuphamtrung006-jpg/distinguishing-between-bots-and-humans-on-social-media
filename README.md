@@ -63,11 +63,6 @@ Thử nghiệm chạy trên 2.907 tài khoản BotSim-24 (chia phân tầng `70%
 
 **Nhận xét đối chứng (Simulation Artifacts)**:
 * Ở cấu hình `Full 18 features`, SVM đạt ~99,93% chủ yếu do đặc điểm của trình mô phỏng BotSim-24: toàn bộ 999 tài khoản bot có bài đăng đều có `score = 0` và `upvote_ratio = 0.0`, còn 1.000 bot đều có `description` được LLM sinh sẵn (`min = 12` ký tự).
-* Khi loại bỏ 3 đặc trưng mang dấu vết mô phỏng này (`behavioral_only`), **RBF SVM** đạt **`74,64% Accuracy`** và **`69,42% F1 (Bot)`**, tương đồng với mức chuẩn BotSim-24 (~74,4% Accuracy) và làm rõ lý do cần kết hợp thêm **Nhánh 2 (RNN)** và **Stacking** ở giai đoạn cuối kì.
+* Khi loại bỏ 3 đặc trưng mang dấu vết mô phỏng này (`behavioral_only`), **RBF SVM** đạt **`74,64% Accuracy`** và **`69,42% F1 (Bot)`**,chính là lý do cần kết hợp thêm **Nhánh 2 (RNN)** và **Stacking** ở giai đoạn cuối kì.
 
-### Hướng dẫn chạy thực nghiệm SVM
-```bash
-cd binary_classification
-python3 preprocess_svm_features.py
-python3 train_svm.py
-```
+
