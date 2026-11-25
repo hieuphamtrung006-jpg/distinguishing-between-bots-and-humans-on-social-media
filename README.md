@@ -11,10 +11,10 @@ Trên các nền tảng mạng xã hội như Reddit, tài khoản tự động 
 
 ### Phát biểu bài toán (Problem Formulation)
 * **Loại bài toán**: Phân loại nhị phân ở cấp độ tài khoản người dùng (User-level Binary Classification).
-* **Đầu vào (Input)**: Mỗi tài khoản $u$ được mô tả thông qua hai nguồn dữ liệu kết hợp:
-  1. **Dữ liệu thống kê và hành vi (`Users.csv` + tổng hợp lịch sử)**: 18 đặc trưng định lượng phản ánh mật độ hoạt động, khoảng trễ thời gian giữa các bài đăng ($\Delta t$), nhịp sinh học 24 giờ (`circadian_entropy`), độ bùng phát (`burstiness`) và tương tác cộng đồng (`score`, `upvote_ratio`, `unique_subreddit_num`).
-  2. **Chuỗi nội dung hoạt động theo thời gian (`user_post_comment.json`)**: Tập hợp các bài đăng (`posts`) và bình luận (`comment_1`, `comment_2`) của tài khoản $u$ được sắp xếp theo thứ tự thời gian (`created_utc`).
-* **Đầu ra (Output)**: Dự đoán nhãn phân loại $\hat{y}_u \in \{0, 1\}$ cùng xác suất dự đoán $P_{\text{final}}(u) \in [0, 1]$:
+* **Đầu vào (Input)**: Mỗi tài khoản <i>u</i> được mô tả thông qua hai nguồn dữ liệu kết hợp:
+  1. **Dữ liệu thống kê và hành vi (`Users.csv` + tổng hợp lịch sử)**: 18 đặc trưng định lượng phản ánh mật độ hoạt động, khoảng trễ thời gian giữa các bài đăng (Δt), nhịp sinh học 24 giờ (`circadian_entropy`), độ bùng phát (`burstiness`) và tương tác cộng đồng (`score`, `upvote_ratio`, `unique_subreddit_num`).
+  2. **Chuỗi nội dung hoạt động theo thời gian (`user_post_comment.json`)**: Tập hợp các bài đăng (`posts`) và bình luận (`comment_1`, `comment_2`) của tài khoản <i>u</i> được sắp xếp theo thứ tự thời gian (`created_utc`).
+* **Đầu ra (Output)**: Dự đoán nhãn phân loại <i>ŷ</i><sub>u</sub> ∈ {0, 1} cùng xác suất dự đoán <i>P</i><sub>final</sub>(<i>u</i>) ∈ [0, 1]:
   * `0`: **Bot** (tài khoản tự động / bot tác nhân).
   * `1`: **Human / User** (tài khoản người dùng thật).
 
