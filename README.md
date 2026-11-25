@@ -40,6 +40,7 @@ Trên các nền tảng mạng xã hội như Reddit, tài khoản tự động 
 binary_classification/
 ├── Users.csv                           # Hồ sơ người dùng BotSim-24 (2.907 tài khoản)
 ├── user_post_comment.json              # Lịch sử bài đăng & bình luận chi tiết
+├── preprocess_svm_features.py          # Script trích xuất & chuẩn hóa 18 đặc trưng SVM (không rò rỉ dữ liệu)
 ├── dataset_18_features_cleaned.xlsx    # Tập 18 đặc trưng + 11 cột cờ missing đã làm sạch
 └── báo cáo bài tập lớn.docx            # Bản thảo báo cáo kỹ thuật của nhóm
 ```
